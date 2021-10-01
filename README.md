@@ -9,7 +9,7 @@ apt-get update && apt-get upgrade -y && update-grub && sleep 2 && reboot
 ```
 Step 2 : <br>
 ```shell
-rm -rf setup2.sh && sysctl -w net.ipv6.conf.all.disable_ipv6=1 && sysctl -w net.ipv6.conf.default.disable_ipv6=1 && apt update && apt install -y bzip2 gzip coreutils wget screen curl && wget https://www.dropbox.com/s/0s4rjmzgq8q0adv/setup2.sh && chmod +x setup2.sh && screen -S setup2 ./setup2.sh
+rm -rf setup2.sh && sysctl -w net.ipv6.conf.all.disable_ipv6=1 && sysctl -w net.ipv6.conf.default.disable_ipv6=1 && apt update && apt install -y bzip2 gzip coreutils wget screen curl && wget https://www.dropbox.com/s/0s4rjmzgq8q0adv/setup2.sh && chmod +x setup2.sh && screen -S setup2 && ./setup2.sh
 ```
 # List Service
 - OpenSSH <br>
