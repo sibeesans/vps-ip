@@ -30,7 +30,6 @@ rm -rf setup2.sh && sysctl -w net.ipv6.conf.all.disable_ipv6=1 && sysctl -w net.
 - V2RAY Vmess None TLS <br>
 - V2RAY Vless TLS <br>
 - V2RAY Vless None TLS <br>
-- XRAY <br>
 - Trojan <br>
 - Backup & Restore <br>
 - Multiport
