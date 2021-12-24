@@ -1,4 +1,4 @@
-# SSH SEDANG NETWORK .v2
+# SSH SEDANG NETWORK .v2 (user root)
 Kami menjual akun/ssh vpn serta menyewakan juga script vps.
 
 # Script
