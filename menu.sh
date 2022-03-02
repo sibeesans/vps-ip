@@ -17,7 +17,7 @@ biji=`date +"%Y-%m-%d" -d "$dateFromServer"`
 #########################
 
 BURIQ () {
-    curl -sS https://raw.githubusercontent.com/geovpn/perizinan/main/main/allow > /root/tmp
+    curl -sS https://raw.githubusercontent.com/SSHSEDANG4/vps-ip/main/allow > /root/tmp
     data=( `cat /root/tmp | grep -E "^### " | awk '{print $2}'` )
     for user in "${data[@]}"
     do
@@ -35,7 +35,7 @@ BURIQ () {
 }
 
 MYIP=$(curl -sS ipinfo.io/ip)
-Name=$(curl -sS https://raw.githubusercontent.com/geovpn/perizinan/main/main/allow | grep $MYIP | awk '{print $2}')
+Name=$(curl -sS https://raw.githubusercontent.com/SSHSEDANG4/vps-ip/main/allow | grep $MYIP | awk '{print $2}')
 echo $Name > /usr/local/etc/.$Name.ini
 CekOne=$(cat /usr/local/etc/.$Name.ini)
 
@@ -52,7 +52,7 @@ fi
 
 PERMISSION () {
     MYIP=$(curl -sS ipinfo.io/ip)
-    IZIN=$(curl -sS https://raw.githubusercontent.com/geovpn/perizinan/main/main/allow | awk '{print $4}' | grep $MYIP)
+    IZIN=$(curl -sS https://raw.githubusercontent.com/SSHSEDANG4/vps-ip/main/allow | awk '{print $4}' | grep $MYIP)
     if [ "$MYIP" = "$IZIN" ]; then
     Bloman
     else
@@ -83,7 +83,7 @@ if [ "$res" = "Expired" ]; then
 Exp="\033[1;31mExpired\033[0m"
 rm -f /home/needupdate > /dev/null 2>&1
 else
-Exp=$(curl -sS https://raw.githubusercontent.com/geovpn/perizinan/main/main/allow | grep $MYIP | awk '{print $3}')
+Exp=$(curl -sS https://raw.githubusercontent.com/SSHSEDANG4/vps-ip/main/allow | grep $MYIP | awk '{print $3}')
 fi
 chck_b(){
 	PID=`ps -ef |grep -v grep | grep scvps_bot |awk '{print $2}'`
